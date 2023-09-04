@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculetor</title>
+    <!-- font awsome kit  -->
+    <script src="https://kit.fontawesome.com/dbd74cafef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-box">
+            <div class="calculaton">
+                <!-- Tip Calculation -->
+                <div class="amound-box">
+                    <label for="bill"> bill</label>
+                    <input type="text" name="bill-amount input" id="bill-amount">
+                    <small>$</small>
+                </div>
+                <div class="tipSection">
+                    <span> Select Tip %</span>
+                    <div class="tip-btn-group">
+                        <div id="btn-five" class="tip">5%</div>
+                        <div id="btn-ten" class="tip">10%</div>
+                        <div id="btn-fifteen" class="tip">15%</div>
+                        <div id="btn-tweentyfive" class="tip">25%</div>
+                        <div id="btn-fifty" class="tip">50%</div>
+                        <div id="btn-custom-amount" class="tip custom-amount">custom</div>
+                    </div>
+                </div>
+                <div id="custom-amount" class="amound-box d-none">
+                    <label for="custom-amount"> custom-amount</label>
+                    <input type="text" name="bill-amount input" id="custom-parsentage">
+                    <small>%</small>
+                </div>
+                <div class="amound-box">
+                    <label for="number of people"> number of people</label>
+                    <input type="text" name="number of people" id="people">
+                    <small id="calcPeople"><i class="fa-solid fa-users"></i></small>
+                </div>
+            </div>
+            <div class="result-reset">
+                <div class="result">
+                    <div class="person">
+                        <div class="anount-text">
+                            <p>Tip amount</p>
+                            <span>/total</span>
+                        </div>
+                        <p class="amount-number">$ <span id="tiplAmount">00</span></p>
+                    </div>
+                    <div class="person">
+                        <div class="anount-text">
+                            <p>Total amount</p>
+                            <span>/total</span>
+                        </div>
+                        <p class="amount-number">$ <span id="totalAmount">00</span></p>
+                    </div>
+                    <div class="person">
+                        <div class="anount-text">
+                            <p>Tip amount</p>
+                            <span>/person</span>
+                        </div>
+                        <p class="amount-number">$ <span id="totalAmountPP">00</span></p>
+                    </div>
+                    <div class="person">
+                        <div class="anount-text">
+                            <p>Total amount</p>
+                            <span>/person</span>
+                        </div>
+                        <p class="amount-number">$ <span id="tipAmountPP">00</span></p>
+                    </div>
+                </div>
+                <button style="outline: none; border:none" class="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <!-- javascript scriting  -->
+    <script src="js/calculate.js"></script>
+</body>
+
+</html>
