@@ -161,6 +161,7 @@ html {
 
     .content-box {
         display: block;
+        margin-top: 2rem;
     }
 
     .calculaton {
