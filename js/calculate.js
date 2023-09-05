@@ -15,7 +15,7 @@ function calTip(amount) {
     const peopleValue = parseFloat(peopleValueText);
     const tipPercentageamount = amount;
     const tipPP = tipPercentageamount / peopleValue;
-    console.log(+tipPP.toFixed(2))
+    console.log(peopleValue)
     return +tipPP.toFixed(2);
 }
 function returnIdToValue(id) {
@@ -32,14 +32,16 @@ function placeAmounts(totalParsentage, tipPP) {
     const amount = parseFloat(amountString)
     const AmountTotalId = returnIdToValue('totalAmount');
     AmountTotalId.innerText = (totalParsentage + amount).toFixed(2);
+    console.log((totalParsentage + amount).toFixed(2))
     //
     const totalAmountIdpp = document.getElementById('people');
     const amountStringpp = totalAmountIdpp.value;
     const amountpp = parseFloat(amountStringpp)
     //
     const AmountppId = returnIdToValue('totalAmountPP');
-    AmountppId.innerText = (amount / amountpp).toFixed(2);
-    console.log(amountpp)
+    const perPersonAmount = (amount / amountpp).toFixed(2)
+    AmountppId.innerText = amount !== NaN ? perPersonAmount : alert('reload and calculate again');
+    console.log(amountStringpp)
     //
     const tipPPId = returnIdToValue('tipAmountPP');
     tipPPId.innerText = tipPP;
@@ -50,8 +52,6 @@ const clearAndPlaceHolder = () => {
     const amountofPeopleField = document.getElementById('people');
     const amount = amountField.value;
     const people = amountofPeopleField.value;
-    amountofPeopleField.value = '';
-    amountField.value = '';
     amountField.setAttribute('placeholder', amount);
     amountofPeopleField.setAttribute('placeholder', people);
 }
